@@ -1,0 +1,13 @@
+<% include partials/header %>
+<h1>Contacts</h1>
+
+<% contacts.forEach(function(contact){ %>
+ <div>
+     <h4><%= contact.name %> </h4>
+     <h4><%= contact.number %></h4>
+     <h4><%=  contact.city %> </h4>
+ </div>
+ 
+<%  }) %>
+
+<% include partials/footer %>

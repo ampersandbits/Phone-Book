@@ -1,0 +1,23 @@
+{
+  "name": "phone-book",
+  "version": "1.0.0",
+  "description": "This is an app to store your contacts.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ampersandbits/Phone-Book.git"
+  },
+  "author": "nani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ampersandbits/Phone-Book/issues"
+  },
+  "homepage": "https://github.com/ampersandbits/Phone-Book#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
