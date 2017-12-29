@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 var contacts = [
     {firstname:"abc", lastname:"qwe", number:4437605137, city:"Crofton"},
-    {firstname:" dinesh",lastname:"namburi", number:8546584412, city:"new jersey"},
+    {firstname:"dinesh",lastname:"namburi", number:8546584412, city:"New jersey"},
     {firstname:"Dheeraj",lastname:"Batchu", number:6549876652, city:"Atlanta" }
     ];
 
