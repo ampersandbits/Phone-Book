@@ -1,13 +1,16 @@
 <% include partials/header %>
-<h1>Contacts</h1>
-
-<% contacts.forEach(function(contact){ %>
- <div>
-     <h4><%= contact.name %> </h4>
-     <h4><%= contact.number %></h4>
-     <h4><%=  contact.city %> </h4>
- </div>
- 
-<%  }) %>
-
+<div class="container">
+        <header class="jumbotron">
+                <h1>Contacts</h1>
+        </header>
+        <a class="btn btn-primary btn-large float-right" href="/new">Add new Contact</a>
+        <% contacts.forEach(function(contact){ %>
+         <div>
+            <h4>
+                <span class="border border-primary rounded"><%= contact.firstname %> <%= contact.lastname %></span>
+            </h4>
+         </div>
+         
+        <%  }) %>
+</div>
 <% include partials/footer %>

@@ -1,9 +1,10 @@
 <% include partials/header %>
 <h1>Add new Contact</h1>
-<form>
-    <input type="text" placeholder="Name">
-    <input type="number" placeholder="Phone Number">
-    <input type="text" placeholder="City">
+<form action="/" method="POST">
+    <input type="text" name="firstname" placeholder="First Name">
+    <input type="text" name="lastname" placeholder="Last Name">
+    <input type="number" name="number" placeholder="Phone Number">
+    <input type="text" name="city" placeholder="City">
     <button>Submit</button>
 </form>
 
