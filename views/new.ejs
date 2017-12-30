@@ -1,11 +1,17 @@
 <% include partials/header %>
-<h1>Add new Contact</h1>
-<form action="/" method="POST">
-    <input type="text" name="firstname" placeholder="First Name">
-    <input type="text" name="lastname" placeholder="Last Name">
-    <input type="number" name="number" placeholder="Phone Number">
-    <input type="text" name="city" placeholder="City">
-    <button>Submit</button>
-</form>
+<div class="container">
+    <div class="rorw">
+        <h1 style="text-align:center">Add new Contact</h1>
+        <div style="width:30%; margin : 0 auto;">
+            <form action="/" method="POST">
+                <input class="form-control" type="text" name="firstname" placeholder="First Name">
+                <input class="form-control" type="text" name="lastname" placeholder="Last Name">
+                <input class="form-control" type="phonenumber" name="number" placeholder="Phone Number">
+                <input class="form-control" type="text" name="city" placeholder="City">
+                <button class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 <% include partials/footer %>
