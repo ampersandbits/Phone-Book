@@ -1,0 +1,15 @@
+<% include partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <h1>Info of <%= contact.firstname %> <%= contact.lastname %></h1>
+    </header>
+    <div class="container border border-info rounded form-group">
+            <h4>First Name: <%= contact.firstname %> <%= contact.lastname %></h4>
+            <h4>Mobbile Number: <%= contact.number %></h4>
+            <h4>City: <%= contact.city %></h4>
+    </div>
+    <a class="btn btn-primary btn-large float left" href="/new">Add new Contact</a>
+    <a href="/" class="btn btn-primary btn-large">Back to Contacts</a>
+</div>
+
+<% include partials/footer %>
