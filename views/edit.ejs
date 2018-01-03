@@ -1,0 +1,17 @@
+<% include partials/header %>
+<div class="container">
+    <div class="rorw">
+        <h1 style="text-align:center">Edit Contact <%= contact.firstname %> <%= contact.lastname %></h1>
+        <div style="width:30%; margin : 0 auto;">
+            <form action="/contact/<%= contact._id %>?_method=PUT" method="POST">
+                <input class="form-control form-group" type="text" name="contact[firstname]" value="<%= contact.firstname %>">
+                <input class="form-control" type="text" name="contact[lastname]" value="<%= contact.lastname %>">
+                <input class="form-control" type="phonenumber" name="contact[number]" value="<%= contact.number %>">
+                <input class="form-control" type="text" name="contact[city]" value="<%= contact.city %>">
+                <button class="btn btn-primary btn-block">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

@@ -1,12 +1,13 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
+var methodOverride = require("method-override");
 var mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost/contacts");
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
-
+app.use(methodOverride("_method"));
 var contactSchema = new mongoose.Schema({
     firstname : String,
     lastname : String,
@@ -78,6 +79,36 @@ app.get("/contact/:id", function(req,res){
     });
 });
 
+// Edit
+app.get("/contact/:id/edit",function(req,res){
+    Contact.findById(req.params.id, function(err,foundContact){
+        if(err){
+            res.redirect("/");
+        } else{
+            res.render("edit",{contact:foundContact});
+        }
+    });
+});
+//update
+app.put("/contact/:id", function(req,res){
+    Contact.findByIdAndUpdate(req.params.id, req.body.contact, function(err,updatedContact){
+        if(err){
+            res.redirect("/");
+        } else{
+            res.redirect("/contact/" + req.params.id);
+        }
+    });
+});
+// delete
+app.delete("/contact/:id", function(req,res){
+    Contact.findByIdAndRemove(req.params.id, function(err){
+        if(err){
+            res.redirect("/");
+        } else{
+            res.redirect("/");
+        }
+    });
+});
 app.get("*", function(req,res){
     res.send("Page Error");
 });
